@@ -31,6 +31,7 @@ Los errores 5xx indican errores que se producen por parte del servidor, tales co
 
 4. 
 Comando : 
+
 <img src = "img/comando1Telnet.png " >
 
 GET /html  HTTP/1.1
@@ -38,6 +39,7 @@ GET /html  HTTP/1.1
 Host: httpbin.org 
 
 Resultado:
+
 <img src = "img/SegundoTelnet.png ">
 
  Obtuvimos un mensaje de éxito (200) y se nos mostró el contenido en formato html. 
