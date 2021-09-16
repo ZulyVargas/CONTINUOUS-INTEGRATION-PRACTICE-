@@ -16,7 +16,7 @@ Comando :
     Host: escuelaing.edu.co    
 <img src = "img/PrimerTelnet.png " >
 
-Obtuvimos el error **400**, este error indica que el servidor no puede o no procesará la solicitud debido a un aparente error del cliente, como sintaxis de solicitud mal formada, tamaño demasiado grande, encuadre de mensaje de solicitud no válido o enrutamiento de solicitud engañoso. 
+Obtuvimos el error **301**, este error indica que el recurso ha sido movido permanentemente. 
 
 
 _¿Qué otros códigos de error existen?, ¿En qué caso se manejarán?_
