@@ -44,3 +44,10 @@ Resultado:
 
  Obtuvimos un mensaje de éxito (200) y se nos mostró el contenido en formato html. 
 
+5. 
+
+ _¿Cuál es la diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?_
+
+ Tanto el método GET como POST son protocolo HTPP el cual envía al servidor como petición (request) y recibe una respuesta a dicha solicitud (response). 
+
+ El concepto **GET** es obtener información del servidor. Traer datos que están almacenadas en el servidor, ya sea una base de datos o archivo al cliente. El concepto **POST** en cambio es enviar información desde el cliente paraa que sea procesada y actualice o agregue información en el servidor, como sería la carga o actualización en si de un artículo. 
