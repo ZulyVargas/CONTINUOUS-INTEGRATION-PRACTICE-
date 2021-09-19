@@ -44,7 +44,7 @@ Comando :
 
 Resultado:
 
-<img src = "img/SegundoTelnet.png ">
+<img src = "img/SegundoTelnet_2.png ">
 
  Obtuvimos un mensaje de éxito (200) y se nos mostró el contenido en formato html. 
 
