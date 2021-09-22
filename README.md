@@ -122,4 +122,41 @@ https://everything.curl.dev/usingcurl/verbose
 
 https://coderwall.com/p/f3avyq/include-http-headers-in-curl-response
 
- ## PARTE II. - HACIENDO UNA APLICACIÓN WEB DINÁMICA A BAJO NIVEL.
+## PARTE II. - HACIENDO UNA APLICACIÓN WEB DINÁMICA A BAJO NIVEL.
+
+___I. Cree un proyecto maven nuevo usando el arquetipo de aplicación Web estándar maven-archetype-webapp:___
+
+Creamos el proyecto con el siguiente comando:
+
+    mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp
+
+Luego completamos los datos solicitados como se puede ver en la siguiente imagen
+
+<img src = "img/CreacionProyectoServlet.png"> 
+
+
+### **Estructura del proyecto**
+
+<img src = "img/EstructuraProyecto.png">
+<br/><br/>
+
+_1. Revise la clase SampleServlet, e identifique qué hace:_
+
+La clase SampleServlet que extiende a HttpServlet permite mediante el método doGet recibir una petición de usuario y dar una respuesta a este.
+
+_4. Compile y ejecute la aplicación en el servidor embebido Tomcat_
+
+Para compilar y ejecutar empleamos los siguientes comandos respectivamente
+
+    mvn package 
+    mvn tomcat7:run
+
+_5. Abra un navegador, y en la barra de direcciones ponga la URL con la cual se le enviarán peticiones al ‘SampleServlet’_
+
+<img src = "img/5-ResultadoConsulta.png">
+<br/><br/>
+
+_6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’_
+
+<img src = "img/6-ResultadoConsulta.png">
+<br/><br/>
