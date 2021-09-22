@@ -82,6 +82,7 @@ _¿Qué otros tipos de peticiones existen?_
 Información tomada de :
 
 https://yosoy.dev/peticiones-http-get-post-put-delete-etc/
+
 https://developer.mozilla.org/es/docs/Web/HTTP/Methods
 
 
@@ -94,14 +95,12 @@ Comando curl :
 <br/><br/>
 Comando curl -v:
 
-
     curl -v www.httpbin.org
 
 <img src = "img/curl_v.png "> 
 <br/><br/>
 
 Comando curl -i:
-
 
     curl -v www.httpbin.org
 
@@ -115,12 +114,12 @@ El comando **curl -i** incluye el encabezado HTTP en la salida. El encabezado HT
 
 El comando **curl** retorna únicamente el contenido del recurso solicitado.
 
-
 Información tomada de:
 
 https://everything.curl.dev/usingcurl/verbose
 
 https://coderwall.com/p/f3avyq/include-http-headers-in-curl-response
+<br/><br/>
 
 ## PARTE II. - HACIENDO UNA APLICACIÓN WEB DINÁMICA A BAJO NIVEL.
 
@@ -159,4 +158,46 @@ _5. Abra un navegador, y en la barra de direcciones ponga la URL con la cual se 
 _6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’_
 
 <img src = "img/6-ResultadoConsulta.png">
+<br/><br/>
+
+_15. Probando funcionalidades_
+
+- Prueba Id existente
+
+<img src = "img/15-IdExistente.png">
+<br/><br/>
+
+- Prueba Id no existente
+
+<img src = "img/15-IdNoExistente.png">
+<br/><br/>
+
+- Prueba sin especificar Id
+
+<img src = "img/15-RequerimientoInvalido.png">
+<br/><br/>
+
+- Prueba Id Iválido
+
+<img src = "img/15-IdInvalido.png">
+<br/><br/>
+
+## PARTE III.
+
+_18. Prueba del Formulario usando el método post_
+
+<img src = "img/PruebaFormulario.png">
+<br/><br/>
+
+_20. Cambie el formulario para que ahora en lugar de POST, use el método GET. ¿Qué diferencia observa?_
+
+Al realizar el cambio y probar nuevamente, el resultado es el mismo, esto se debe a que la implemetación de los 2 métodos es la mima.
+
+_21. ¿Qué se está viendo?_
+
+Cuando se ingresa en el espacio un valor diferente a un número válido se muestra una advertencia indicándonos que el valor ingresado no es un valor de tipo numérico. Si el valor ingresado es válido se muestran los datos solicitados como se ve a continuación:
+
+<img src = "img/21-ConsultaValida-1.png">
+
+<img src = "img/21-ConsultaValida-2.png">
 <br/><br/>
