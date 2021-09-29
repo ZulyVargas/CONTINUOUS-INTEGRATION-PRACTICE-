@@ -1,15 +1,11 @@
 package edu.eci.cvds.servlet.backingBean;
 
-import java.awt.List;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.enterprise.context.SessionScoped;
+//import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import edu.eci.cvds.servlet.model.Todo;
 
 
 @ManagedBean(name = "calculadoraBean")
@@ -23,9 +19,7 @@ public class CalculadoraBean {
 	private int cantidadNumeros;
 	//Lista de números 
 	private String numeros;
-	private ArrayList<Double> listaNumeros ;
-	private ArrayList<ArrayList<Double>> valoresIngresados;
-	
+	private ArrayList<Double> listaNumeros ;	
 	
 	public CalculadoraBean() {		
 	}
