@@ -8,8 +8,8 @@ __Zuly Valentina Vargas Ramirez__
 ### Agregando Proyectos a CircleCI
 
 -   Realizando las configuraciones iniciales
-    <img src="img/ConfigCircleCI.png">
-    <img src="img/ConfigCircleCI-2.png">
+<img src="img/ConfigCircleCI.png">
+<img src="img/ConfigCircleCI-2.png">
 
 -   Se agrega el nombre de la aplicación y la llave en las variables de entorno de CircleCI:
     <img src="img/ConectandoHeroku.png">
