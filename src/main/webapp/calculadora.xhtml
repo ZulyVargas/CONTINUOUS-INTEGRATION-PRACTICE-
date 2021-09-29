@@ -4,36 +4,73 @@
 xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:p="http://primefaces.org/ui">
 
-	<h:head>     
+	<h:head>  
+		<style>
+		h1{
+			font-family: Verdana;
+			color: white;	
+		}
+		h3{
+			color: white;	
+			font-style:italic;
+		}
+		body {
+		  background-image: url("http://cdn30.us1.fansshare.com/image/wallpaper1080p/black-abstract-hd-wallpapers-wallpaper-hd-abstract-1640478328.jpg");	
+		  font-family: Verdana;
+		  background-color: lightblue;
+		}
+		
+		#enunciado{
+		  color : #D9F4ED; 
+		  font-family: Verdana;
+		  font-weight: bold; 
+		}
+		.Salidas{
+		  color : #D9F4ED; 
+		  font-family: Verdana;
+		  font-weight: bold; 	
+		}
+		#numeros{
+			border: 8px double red;
+			
+			
+			
+		}
+ 
+		</style>		
 	</h:head>
 	<h:body>
+		<center>
 		<h:form id="calculadora_form">
+		<h1>CALCULADORA</h1>
+		<h3>Laboratorio 06. Realizado por Camilo y Zuly.</h3>
 		
-		<p:inputText id="numeros" value="#{calculadoraBean.numeros}" binding="#{input}" /><br></br>
+		<p  id="enunciado" > Ingresa los datos con los cuales deseas realizar los cálculos separados por comas.
+		Ejemplo: 3,4,68,9.8</p>
+		<p:inputText id="numeros" style="width : 500px; " value="#{calculadoraBean.numeros}" binding="#{input}" /><br></br>
 		
+		<p:outputLabel  id="moda" class="Salidas" value="#{calculadoraBean.moda}" style="display:none" /><br></br>
+		<p:commandButton id="CalculoModa" style="width : 280px; " value="Obtener Moda" update="calculadora_form" actionListener="#{calculadoraBean.calculateMode(input.value)}" styleClass="rounded-button"/><br></br>
 		
-		
-		<p:outputLabel  id="moda" value="#{calculadoraBean.moda}" style="display:none" /><br></br>
-		<p:commandButton id="CalculoModa" value="Obtener Moda" update="calculadora_form" actionListener="#{calculadoraBean.calculateMode(input.value)}" styleClass="rounded-button"/><br></br>
-		
-		
-		<br></br>
-		<p:outputLabel id="promedio" value="#{calculadoraBean.promedio}"/><br></br>
-		<p:commandButton id="CalculoPromedio" value="Obtener Promedio" update="calculadora_form" actionListener="#{calculadoraBean.calculateMean(input.value)}" styleClass="rounded-button"/><br></br>
 		
 		<br></br>
-		<p:outputLabel id="desviacionEstandar" value="#{calculadoraBean.desviacionEstandar}"/><br></br>
-		<p:commandButton id="CalculoDS" value="Obtener Desviación Estándar" update="calculadora_form" actionListener="#{calculadoraBean.calculateStandardDeviation(input.value)}" styleClass="rounded-button"/><br></br>
+		<p:outputLabel id="promedio" class="Salidas" value="#{calculadoraBean.promedio}"/><br></br>
+		<p:commandButton id="CalculoPromedio" style="width : 280px; " value="Obtener Promedio" update="calculadora_form" actionListener="#{calculadoraBean.calculateMean(input.value)}" styleClass="rounded-button"/><br></br>
 		
 		<br></br>
-		<p:outputLabel id="varianza" value="#{calculadoraBean.varianza}"/><br></br>
-		<p:commandButton id="CalculoVarianza" value="Obtener Varianza" update="calculadora_form" actionListener="#{calculadoraBean.calculateVariance(input.value)}" styleClass="rounded-button"/><br></br>
+		<p:outputLabel id="desviacionEstandar" class="Salidas" value="#{calculadoraBean.desviacionEstandar}"/><br></br>
+		<p:commandButton id="CalculoDS" style="width : 280px; " value="Obtener Desviación Estándar" update="calculadora_form" actionListener="#{calculadoraBean.calculateStandardDeviation(input.value)}" styleClass="rounded-button"/><br></br>
 		
 		<br></br>
-		<p:commandButton id="Restart" value="Reiniciar" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" styleClass="rounded-button ui-button-danger"/><br></br>
+		<p:outputLabel id="varianza" class="Salidas" value="#{calculadoraBean.varianza}"/><br></br>
+		<p:commandButton id="CalculoVarianza" style="width : 280px; " value="Obtener Varianza" update="calculadora_form" actionListener="#{calculadoraBean.calculateVariance(input.value)}" styleClass="rounded-button"/><br></br>
+		
+		<br></br>
+		<p:commandButton id="Restart" style="width : 180px; " value="Reiniciar" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" styleClass="rounded-button ui-button-danger"/><br></br>
 		
 
 
 		</h:form>
+		</center>
 	</h:body>
 </html>
