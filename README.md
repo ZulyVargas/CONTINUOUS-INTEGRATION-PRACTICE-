@@ -22,5 +22,5 @@ __Zuly Valentina Vargas Ramirez__
 
 [![CircleCI](https://circleci.com/gh/ZulyVargas/lab06/tree/master.svg?style=svg)](https://circleci.com/gh/ZulyVargas/lab06/tree/master)
 
-### Enlace aplicación desplegada:
+### Enlace aplicación desplegada
 https://calculadorabeanlab06.herokuapp.com/faces/calculadora.xhtml
