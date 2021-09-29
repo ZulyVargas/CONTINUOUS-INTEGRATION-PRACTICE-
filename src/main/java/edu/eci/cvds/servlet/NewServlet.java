@@ -98,49 +98,30 @@ public class NewServlet extends HttpServlet {
 		    		.append("</h1>")
 		    		.toString());
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try{
-		//Recibir el id ingresado 
 		String id = req.getParameter("id"); 
-		//Consultar el ToDo
 		Todo todo = Service.getTodo(Integer.parseInt(id));
 		Writer responseWriter = resp.getWriter();
-		//responseWriter.write(todo.toString()+"Hey");
-
-		//Respuesta OK
 		resp.setStatus(HttpServletResponse.SC_OK);
-		// Crear List para generar la tabla
 		todoList= new ArrayList<Todo>();
 		todoList.add(todo);
-		//Mostrar la tabla
 		responseWriter = resp.getWriter();
-		responseWriter.write(Service.todosToHTMLTable(todoList));
-		}
-		//Excepcion para valor nulo
+		responseWriter.write(Service.todosToHTMLTable(todoList)); }
 		catch(NumberFormatException e){
 			htmlInvalidRequiered(resp);
 		}
-		
-		//Excepcion servidor
 		catch (MalformedURLException e){
-			htmlInsideError(resp);
-		}
-		
-		//Excepcion valor nulo o caracter no valido
+			htmlInsideError(resp);}
 		catch(IOException e) {
 			htmlNotFound(resp);
 		}
-		
-		//Excepcion para valor nulo
 		catch(Exception e){
-			htmlInvalidRequiered(resp);
-			}
-		
+			htmlInvalidRequiered(resp);}
 	}
 	
 	
